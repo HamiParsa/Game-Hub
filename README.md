@@ -1,72 +1,111 @@
 <div align="center">
+  <img src="https://skillicons.dev/icons?i=react,next,typescript,tailwind,framer" alt="Tech Stack" />
+  
   <h1>🎮 Game-Hub</h1>
-  <p>A modern video game discovery platform built with React, TypeScript, and Chakra UI</p>
+  <p>Discover, explore, and track your favorite games with this modern gaming platform ✨</p>
   
-  <!-- Replace with your actual live demo link if available -->
-  <a href="https://game-hub-chi-lovat.vercel.app/">
-    <img src="https://img.shields.io/badge/LIVE_DEMO-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white"/>
+  <a href="https://animated-unicorn-db139d.netlify.app/">
+    <img src="https://img.shields.io/badge/🚀_Live_Demo-FF6B6B?style=for-the-badge&logo=netlify&logoColor=white"/>
   </a>
-  
-  <br/>
-  
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Chakra_UI-319795?style=for-the-badge&logo=chakra-ui&logoColor=white"/>
-  <img src="https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=react-query&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
+  <a href="https://github.com/HamiParsa/Game-Hub">
+    <img src="https://img.shields.io/badge/📁_Source_Code-24292e?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
 </div>
 
 ---
 
 ## 📖 About The Project
 
-**Game-Hub** is a video game discovery platform that helps players find new games based on their preferences. Built with modern frontend technologies, it provides a seamless experience for browsing, searching, and filtering thousands of games from the RAWG Video Games Database API.
-
-This project was developed as a hands-on practice to master **React** with **TypeScript**, implement efficient data fetching with **React Query**, and build beautiful UIs with **Chakra UI**.
+**Game-Hub** is a cutting-edge gaming discovery platform built with modern web technologies. It provides gamers with a comprehensive database of games, allowing them to explore, filter, and get detailed information about their favorite titles. The application features a sleek, responsive interface with smooth animations and real-time data fetching.
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-- **🎯 Game Discovery** – Browse thousands of games with infinite scroll
-- **🔍 Advanced Search** – Search games by title with debounced input
-- **🎮 Platform Filters** – Filter games by platform (PC, PlayStation, Xbox, Nintendo)
-- **🏷️ Genre Filtering** – Browse games by genres like Action, RPG, Strategy, etc.
-- **📊 Sorting Options** – Sort by relevance, release date, rating, and popularity
-- **📱 Responsive Design** – Fully responsive layout for all devices
-- **🌓 Dark/Light Mode** – Toggle between themes (persisted in localStorage)
-- **⚡ Optimized Performance** – Data caching with React Query for smooth UX
-- **🖼️ Game Details** – View detailed information including screenshots and Metacritic scores
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">🎯</td>
+      <td><strong>Game Discovery</strong> - Browse thousands of games with infinite scroll</td>
+    </tr>
+    <tr>
+      <td align="center">🔍</td>
+      <td><strong>Advanced Filtering</strong> - Filter by genre, platform, rating, and release year</td>
+    </tr>
+    <tr>
+      <td align="center">📊</td>
+      <td><strong>Detailed Analytics</strong> - View ratings, reviews, and game statistics</td>
+    </tr>
+    <tr>
+      <td align="center">🎨</td>
+      <td><strong>Dark/Light Mode</strong> - Seamless theme switching with persistent preference</td>
+    </tr>
+    <tr>
+      <td align="center">⚡</td>
+      <td><strong>Real-time Data</strong> - Live updates from RAWG Video Games Database API</td>
+    </tr>
+    <tr>
+      <td align="center">📱</td>
+      <td><strong>Fully Responsive</strong> - Perfect experience on all devices</td>
+    </tr>
+  </table>
+</div>
 
 ---
 
 ## 🛠️ Built With
 
-| Technology | Purpose |
-|------------|---------|
-| [React](https://reactjs.org/) | Frontend library for building UI components |
-| [TypeScript](https://www.typescriptlang.org/) | Static typing for better code quality |
-| [Chakra UI](https://chakra-ui.com/) | Component library for accessible and customizable UI |
-| [React Query](https://tanstack.com/query/latest) | Data fetching, caching, and state management |
-| [Axios](https://axios-http.com/) | HTTP client for API requests |
-| [React Router](https://reactrouter.com/) | Client-side routing and navigation |
-| [Vite](https://vitejs.dev/) | Fast build tool and development server |
-| [RAWG API](https://rawg.io/apidocs) | Video games database API |
+<div align="center">
+  
+  | Frontend | State & Data | Styling | Animation | API |
+  |----------|--------------|---------|-----------|-----|
+  | ⚛️ React 18 | 🔄 Zustand | 🎨 Tailwind CSS | 🎭 Framer Motion | 🎮 RAWG API |
+  | 📘 TypeScript | ⚡ React Query | 💅 CSS Modules | ✨ Custom Hooks | 🔌 Axios |
+  | 🧭 React Router | 🎯 Context API | 📱 Mobile-first | 🎪 Transitions | 🌐 RESTful |
+
+</div>
 
 ---
 
-## 🚀 Getting Started
+## 🎯 Core Functionalities
+
+### 🎮 For Gamers
+- **Browse Games**: Explore thousands of games with pagination
+- **Smart Search**: Find games by title, genre, or platform
+- **Game Details**: View screenshots, trailers, and system requirements
+- **Rating System**: Check Metacritic and user ratings
+- **Release Calendar**: See upcoming and recently released games
+
+### 👨‍💻 For Developers
+- **Modular Architecture**: Clean, maintainable code structure
+- **Custom Hooks**: Reusable logic for data fetching and filtering
+- **Type Safety**: Full TypeScript implementation
+- **Performance Optimized**: Lazy loading and code splitting
+- **SEO Friendly**: Dynamic meta tags and routing
+
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
-
-- Node.js (v16 or higher)
+- Node.js 18+ 
 - npm or yarn
-- RAWG API key (free) – [Get it here](https://rawg.io/apidocs)
+- RAWG API key ([Get one here](https://rawg.io/apidocs))
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/HamiParsa/Game-Hub.git
-   cd Game-Hub
+```bash
+# Clone the repository
+git clone https://github.com/HamiParsa/Game-Hub.git
+
+# Navigate to project directory
+cd Game-Hub
+
+# Install dependencies
+npm install
+
+# Create .env file and add your API key
+echo "VITE_RAWG_API_KEY=your_api_key_here" > .env
+
+# Start development server
+npm run dev
