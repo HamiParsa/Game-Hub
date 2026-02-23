@@ -109,3 +109,23 @@ echo "VITE_RAWG_API_KEY=your_api_key_here" > .env
 
 # Start development server
 npm run dev
+
+Game-Hub/
+├── 📁 public/              # Static assets
+├── 📁 src/
+│   ├── 📁 components/      # Reusable UI components
+│   │   ├── GameCard/
+│   │   ├── Navbar/
+│   │   ├── Filters/
+│   │   └── Layout/
+│   ├── 📁 pages/           # Route pages
+│   ├── 📁 hooks/           # Custom React hooks
+│   ├── 📁 services/        # API integration
+│   ├── 📁 store/           # State management
+│   ├── 📁 types/           # TypeScript interfaces
+│   ├── 📁 utils/           # Helper functions
+│   └── 📁 styles/          # Global styles
+├── 📄 package.json
+├── 📄 tsconfig.json
+├── 📄 tailwind.config.js
+└── 📄 README.md
