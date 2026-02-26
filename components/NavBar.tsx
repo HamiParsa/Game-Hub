@@ -17,7 +17,13 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
-  // Handle scroll effect
+  const isActivePath = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -26,30 +32,31 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      document.body.classList.add('menu-open');
     } else {
       document.body.style.overflow = "unset";
+      document.body.classList.remove('menu-open');
     }
     return () => {
       document.body.style.overflow = "unset";
+      document.body.classList.remove('menu-open');
     };
   }, [isOpen]);
 
   return (
     <>
-      {/* Header - Desktop & Mobile */}
       <header className={`
-        fixed top-0 left-0 right-0 z-50 transition-all duration-700
+        fixed top-0 left-0 right-0 z-100 transition-all duration-700
         ${isScrolled 
           ? 'bg-black/80 backdrop-blur-md py-3 shadow-lg shadow-black/20' 
           : 'bg-transparent py-5'
         }
+        ${isOpen ? 'pointer-events-auto' : ''}
       `}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          {/* Logo - simple and bold */}
           <Link href="/" className="relative group">
             <span className="text-2xl font-black tracking-tighter">
               <span className="text-white">GAME</span>
@@ -58,10 +65,9 @@ export default function Navbar() {
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300" />
           </Link>
 
-          {/* Desktop Menu - minimal */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => {
-              const isActive = pathname === item.href;
+              const isActive = isActivePath(item.href);
               return (
                 <Link
                   key={item.href}
@@ -81,10 +87,9 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden relative w-10 h-10 flex items-center justify-center text-white z-50"
+            className="md:hidden relative w-10 h-10 flex items-center justify-center text-white z-200"
             aria-label="Toggle menu"
           >
             <div className="relative">
@@ -92,40 +97,32 @@ export default function Navbar() {
                 size={20} 
                 className={`transition-all duration-500 ${isOpen ? 'opacity-0 rotate-180 scale-0' : 'opacity-100 rotate-0 scale-100'}`} 
               />
-              
             </div>
           </button>
         </div>
       </header>
 
-      {/* Mobile Menu - Premium Full Screen */}
       <div className={`
-        fixed inset-0 z-40 md:hidden
+        fixed inset-0 z-1000 md:hidden
         transition-all duration-700 ease-in-out
         ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}
       `}>
-        {/* Animated Background with Gradient */}
-        <div className="absolute inset-0 bg-linear-to-br from-gray-900 via-black to-gray-900">
-          {/* Animated Orbs */}
+        <div className="absolute inset-0 bg-linear-to-br from-gray-900 via-black to-gray-900 z-1001">
           <div className="absolute top-0 -left-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-0 -right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
           
-          {/* Grid Pattern Overlay */}
           <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5" />
         </div>
         
-        {/* Close Button - Alternative to backdrop click */}
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center z-50 hover:bg-white/10 transition-all duration-300 group"
+          className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center z-1003 hover:bg-white/10 transition-all duration-300 group"
           aria-label="Close menu"
         >
           <X size={20} className="text-white/70 group-hover:text-white group-hover:rotate-90 transition-all duration-300" />
         </button>
         
-        {/* Menu Content */}
-        <div className="relative h-full flex flex-col items-center justify-center px-8">
-          {/* Logo or Brand */}
+        <div className="relative h-full flex flex-col items-center justify-center px-8 z-1002">
           <div className={`
             absolute top-12 left-1/2 -translate-x-1/2
             transition-all duration-700 delay-300
@@ -140,11 +137,10 @@ export default function Navbar() {
             </div>
           </div>
           
-          {/* Navigation Items */}
           <div className="w-full max-w-sm space-y-4">
             {navItems.map((item, index) => {
               const Icon = item.icon;
-              const isActive = pathname === item.href;
+              const isActive = isActivePath(item.href);
               
               return (
                 <Link
@@ -166,12 +162,10 @@ export default function Navbar() {
                       : 'hover:bg-white/5 border border-transparent'
                     }
                   `}>
-                    {/* Active Indicator */}
                     {isActive && (
                       <div className="absolute left-0 w-1 h-8 bg-linear-to-b from-cyan-400 to-purple-400 rounded-full" />
                     )}
                     
-                    {/* Icon Container */}
                     <div className={`
                       relative w-12 h-12 rounded-xl flex items-center justify-center
                       transition-all duration-300
@@ -188,13 +182,11 @@ export default function Navbar() {
                         `} 
                       />
                       
-                      {/* Glow Effect */}
                       {isActive && (
                         <div className="absolute inset-0 rounded-xl bg-cyan-400 blur-md opacity-50 animate-pulse" />
                       )}
                     </div>
                     
-                    {/* Label */}
                     <div className="flex-1">
                       <span className={`
                         block text-lg font-medium transition-all duration-300
@@ -203,13 +195,11 @@ export default function Navbar() {
                         {item.label}
                       </span>
                       
-                      {/* Subtle Description */}
                       <span className="text-xs text-white/30">
                         {isActive ? 'Current page' : 'Tap to navigate'}
                       </span>
                     </div>
                     
-                    {/* Arrow Icon */}
                     <ChevronRight 
                       size={18} 
                       className={`
@@ -226,7 +216,6 @@ export default function Navbar() {
             })}
           </div>
           
-          {/* Footer */}
           <div className={`
             absolute bottom-12 left-1/2 -translate-x-1/2 text-center
             transition-all duration-700 delay-700
@@ -238,10 +227,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Backdrop with blur - Only visible when menu is open */}
       <div 
         className={`
-          fixed inset-0 bg-black/60 backdrop-blur-sm z-30 transition-all duration-500 md:hidden
+          fixed inset-0 bg-black/60 backdrop-blur-sm z-999 transition-all duration-500 md:hidden
           ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}
         `}
         onClick={() => setIsOpen(false)}
