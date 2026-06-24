@@ -91,11 +91,17 @@ npm run dev
 ## 🖼️ Project Preview
 
 <div align="center">
-  <h3>✨ Screenshots ✨</h3>
-  <p><em>(Add your project screenshots here)</em></p>
-  <img src="/screenshot1.png" alt="Gaming News Hub Homepage" width="700px" />
+  <img src="pic1.png" width="700px" />
   <br/><br/>
-  <img src="/screenshot2.png" alt="Gaming News Hub Articles" width="700px" />
+  <img src="pic2.png" width="700px" />
+  <br/><br/>
+  <img src="pic3.png" width="700px" />
+  <br/><br/>
+  <img src="pic4.png" width="700px" />
+  <br/><br/>
+  <img src="pic5.png" width="700px" />
+  <br/><br/>
+  <img src="pic6.png" width="700px" />
 </div>
 
 ---
