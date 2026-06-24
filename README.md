@@ -128,9 +128,7 @@ npm run dev
 
 - 🔍 Advanced search and filtering for articles
 - 💬 User comments and discussion system
-- 🌙 Dark/Light mode toggle
-- 📱 PWA support for offline reading
-- 🔔 Push notifications for breaking news
+- 🌙 Dark mode toggle
 - 🎮 Game review and rating system
 
 ---
