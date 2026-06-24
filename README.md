@@ -62,30 +62,6 @@ The wild west awaits in the ultimate outlaw experience
 
 ---
 
-## 📁 Project Structure
-
-```
-Gaming-News-Hub/
-├── 📁 public/              # Static assets
-├── 📁 src/
-│   ├── 📁 components/      # Reusable UI components
-│   │   ├── Navbar/
-│   │   ├── FeaturedStory/
-│   │   ├── ArticleCard/
-│   │   └── Newsletter/
-│   ├── 📁 pages/           # Route pages
-│   ├── 📁 hooks/           # Custom React hooks
-│   ├── 📁 services/        # API integration
-│   ├── 📁 store/           # State management
-│   ├── 📁 types/           # TypeScript interfaces
-│   └── 📁 utils/           # Helper functions
-├── 📄 package.json
-├── 📄 tsconfig.json
-├── 📄 tailwind.config.js
-└── 📄 README.md
-```
-
----
 
 ## 🚀 Getting Started
 
