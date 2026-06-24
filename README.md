@@ -138,7 +138,7 @@ npm run dev
 ## 👨‍💻 Author
 
 **Developed by:** [Hami Parsa](https://github.com/hamiparsa)  
-💬 Passionate Front-End Developer | Building creative and interactive web experiences
+💬 Passionate Full-Stack Developer | Building creative and interactive web experiences
 
 ---
 
